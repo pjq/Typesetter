@@ -28,6 +28,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
+import me.ele.uetool.UETool;
 import uk.co.chrisjenx.calligraphy.TypefaceUtils;
 
 import static com.bignerdranch.android.typesetter.AndroidUtils.IS_LOLLIPOP_AND_ABOVE;
@@ -43,6 +44,8 @@ public class TypesetterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        UETool.showUETMenu();
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_typesetter);
 
         if (savedInstanceState == null) {
